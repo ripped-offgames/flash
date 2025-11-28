@@ -67,37 +67,37 @@
 <body>
     <div class="container">
         <div class="game-item">
-            <button class="game-button" onclick="openGame()">
-                <img src="https://via.placeholder.com/200x200/4CAF50/ffffff?text=Game+1" alt="Game 1">
+            <button class="game-button" onclick="openGame('game1.swf')">
+                <img src="img/game1.jpg" alt="Game 1">
             </button>
             <div class="game-label">Play Game</div>
         </div>
 
         <div class="game-item">
-            <button class="game-button" onclick="openGame()">
-                <img src="https://via.placeholder.com/200x200/2196F3/ffffff?text=Game+2" alt="Game 2">
+            <button class="game-button" onclick="openGame('game2.swf')">
+                <img src="img/game2.jpg" alt="Game 2">
             </button>
             <div class="game-label">Play Game</div>
         </div>
 
         <div class="game-item">
-            <button class="game-button" onclick="openGame()">
-                <img src="https://via.placeholder.com/200x200/FF9800/ffffff?text=Game+3" alt="Game 3">
+            <button class="game-button" onclick="openGame('game3.swf')">
+                <img src="img/game3.jpg" alt="Game 3">
             </button>
             <div class="game-label">Play Game</div>
         </div>
 
         <div class="game-item">
-            <button class="game-button" onclick="openGame()">
-                <img src="https://via.placeholder.com/200x200/E91E63/ffffff?text=Game+4" alt="Game 4">
+            <button class="game-button" onclick="openGame('game4.swf')">
+                <img src="img/game4.jpg" alt="Game 4">
             </button>
             <div class="game-label">Play Game</div>
         </div>
     </div>
 
     <script>
-        function openGame() {
-            window.location.href = '/swf/game.swf';
+        function openGame(gameName) {
+            window.location.href = '/swf/' + gameName;
         }
     </script>
 </body>
