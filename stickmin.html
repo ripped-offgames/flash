@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Launcher</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 40px;
+        }
+
+        .game-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .game-button {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+            padding: 0;
+            background-color: #333;
+        }
+
+        .game-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .game-button:active {
+            transform: scale(0.98);
+        }
+
+        .game-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-label {
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="game-item">
+            <button class="game-button" onclick="openGame()">
+                <img src="https://via.placeholder.com/200x200/4CAF50/ffffff?text=Game+1" alt="Game 1">
+            </button>
+            <div class="game-label">Play Game</div>
+        </div>
+
+        <div class="game-item">
+            <button class="game-button" onclick="openGame()">
+                <img src="https://via.placeholder.com/200x200/2196F3/ffffff?text=Game+2" alt="Game 2">
+            </button>
+            <div class="game-label">Play Game</div>
+        </div>
+
+        <div class="game-item">
+            <button class="game-button" onclick="openGame()">
+                <img src="https://via.placeholder.com/200x200/FF9800/ffffff?text=Game+3" alt="Game 3">
+            </button>
+            <div class="game-label">Play Game</div>
+        </div>
+
+        <div class="game-item">
+            <button class="game-button" onclick="openGame()">
+                <img src="https://via.placeholder.com/200x200/E91E63/ffffff?text=Game+4" alt="Game 4">
+            </button>
+            <div class="game-label">Play Game</div>
+        </div>
+    </div>
+
+    <script>
+        function openGame() {
+            window.location.href = '/swf/game.swf';
+        }
+    </script>
+</body>
+</html>
